@@ -1,0 +1,63 @@
+body{
+    border-style: groove;
+    width: 22%;
+    margin: auto;
+    margin-top: 8%;
+}
+header{
+	color: #FFFF;
+    background-color: #3ca4a9a3;
+    font-weight: 700;
+    height: 6vh;
+    padding-top: 2%;
+    text-align: center;
+}
+.middle{
+	margin-top: 6%;
+    margin-bottom: 10%;
+}
+.btn-info{
+	background-color: #3ca4a9a3;
+}
+.btn{
+	font-weight: 600;
+	width: 19vw;
+}
+#mail{
+	border-style: hidden;
+	margin-left: -6%;
+	outline: none;
+}
+#password{
+	border-style: hidden;
+	margin-left: -6%;
+	outline: none;
+}
+.Mail{
+	border-style: groove;
+    border-width: thin;
+    margin: 1%;
+    padding-top: 1%;
+}
+.Pass{
+	border-style: groove;
+    border-width: thin ;
+    margin:6% 1% 1% 1%;  
+    padding-top: 1%;    
+}
+#submit{
+    margin-top: 10%;
+    margin-bottom: 3%;
+}
+a{
+	color: black;
+}
+.btn-warning{
+	background-color: #dbb23d;
+	color: white;
+	margin-top: 7%;
+    margin-bottom: 13%;
+}
+.btn-primary{
+	background-color: #3B5998;
+}
