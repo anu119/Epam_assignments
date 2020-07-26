@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Registration</title>
+</head>
+<body>
+    <div class="container my-3">
+        <div class="row align-items-center">
+            <div class="container-fluid col-xl-6">
+                <div class="row m-0">
+                    <marquee scrolldelay = "200" direction="right" behaviour="alternate" class="col inline-block display-4" id="title">Goal</marquee>
+                    <marquee scrolldelay = "100" behaviour="alternate" class="col inline-block display-4 text-center" id="title">Carrer</marquee>
+                </div>
+                <marquee  scrolldelay = "150" behaviour="alternate" class="row m-0 display-1 text-center m-4" id="title">Passion</marquee>
+                <div class="row m-0">
+                    <marquee behaviour="alternate" class="col inline-block text-center" id="title">Inspiration</marquee>
+                    <marquee direction="right" behaviour="alternate" class="col inline-block text-center" id="title">Practice</marquee>
+                </div>
+                <div class="row m-0">
+                    <marquee direction="right" behaviour="alternate" class="col inline-block text-center" id="title"><h1>Smart</h1></marquee>
+                    <marquee behaviour="alternate" class="col inline-block text-center display-2" id="title">Strength</marquee>
+                </div>
+                <div class="row m-0">
+                    <marquee  scrolldelay = "100" direction="right" behaviour="alternate" class="col inline-block text-center display-3" id="title">Hard Work</marquee>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <h1 class="text-center">Register</h1>
+                <form class="form-group">
+                    <label for="fn">First Name</label>
+                    <input type="text" class="form-control" id="fn" placeholder="First Name" required><br>
+                    <label for="ln">Last Name</label>
+                    <input type="text" id="ln" class="form-control" placeholder="Last Name" required><br>
+                    <label>Gender</label><br>
+                    <label class="radio-inline">
+                        <input type="radio" name="gender"> Male  
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="gender"> Female  
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="gender"> Others  
+                    </label><br>
+                    <label for="mail">Email</label>
+                    <input type="email" id="mail" class="form-control" placeholder="example@email.com" onchange="return mailvalid()" required><br>
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" class="form-control" id="dob" required><br>
+                    <label for="phn">Phone</label>
+                    <input type="number" id="phn" class="form-control" required onchange="phnvalid()"><br>
+                    <label for="pass">Create Password</label>
+                        <input type="password" id="pass" class="form-control" required><br>
+                    <label for="rp">Re-Enter Password</label>
+                        <input type="password" id="rpass" class="form-control" onchange="return passvalid()" required><br>
+                    <input type="checkbox" id="cb">
+                    <label for="cb"></label><small class="col-10">On Registration you will accept our cookies and terms and conditions</small></label><br><br>
+                    <input type="button" class="btn btn-primary form-control" value="REGISTER" onclick="return valid((mailvalid())&&(phnvalid())&&passvalid())">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+    <script type="text/javascript">
+        function mailvalid(){
+            var em=document.getElementById("mail").value;
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if(em.match(mailformat))
+            {
+                return true;
+            }
+            else
+            {
+                alert("Enter a valid Email Address");
+                return(false);
+            }
+        }
+        function phnvalid(){            
+            var pv=document.getElementById("phn").value+"";
+            if(pv.length!=10)
+            {
+                alert("Enter a valid phone number!!!");
+                return false;
+            }
+            return true;
+        }
+        function passvalid(){
+            var cp=document.getElementById("pass").value;
+            var rp=document.getElementById("rpass").value;
+            if(cp=="")
+            {
+                alert("Enter a valid password!!!");
+                return false;
+            }
+            if(cp!=rp)
+            {
+                alert("Both Passwords should match!!!");
+                flag=false;
+                return false;
+            }
+        }
+        function valid(val)
+        {
+            if(val==false)
+                return false;
+            else
+            {
+                window.open("thankyou.html");
+            }
+        }
+    </script>
+</html>

@@ -1,0 +1,46 @@
+body{
+    background:linear-gradient(-45deg,#313866,#50409A,#964EC2,#FF7BBF); 
+    color: white;
+}
+marquee{
+    margin: 0 !important;
+}
+
+.x{
+    background-color: black;
+    opacity: 0.3;
+}
+
+textarea,select,input{
+    color: white !important;
+}
+
+.custom-file-label{
+    background: transparent!important;
+    color: white;
+}
+
+.custom-file-input{
+    background: transparent !important;
+}
+
+textarea,input:focus,select:focus{
+    background: transparent!important;
+}
+
+form{
+    border-radius: 15px;
+    padding: 20px;
+}
+.form-control{
+    border-radius: 10px;
+    background:transparent;
+}
+
+input::placeholder{
+    color: white !important;
+    opacity: 1;
+}
+.btn{
+    border: 1px solid white ;
+}
